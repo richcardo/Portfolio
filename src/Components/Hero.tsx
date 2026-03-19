@@ -1,10 +1,10 @@
-import photo from "../public/photo-1605379399642-870262d3d051.avif";
+
 function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center text-center">
       {/* Background Image */}
       <img
-        src={photo}
+        src="/photo-1605379399642-870262d3d051.avif"
         alt="Hero background"
         className="absolute inset-0 w-full h-full object-cover"
       />

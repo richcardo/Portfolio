@@ -1,22 +1,57 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  return (
-    <nav className="w-full flex justify-between items-center px-8 py-4 shadow-md bg-white z-50">
-      <h1 className="text-xl font-bold">Riccardo Dev</h1>
+  const [isOpen, setIsOpen] = useState(false);
 
-      <ul className="hidden md:flex space-x-8">
-        <li>
-          <Link to="/" className="hover:text-blue-500">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="hover:text-blue-500">
-            Contatti
-          </Link>
-        </li>
-      </ul>
+  return (
+    <nav className="w-full bg-white shadow-md z-50">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <h1 className="text-xl font-bold">Riccardo Dev</h1>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8">
+          <li>
+            <Link to="/" className="hover:text-blue-500">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-blue-500">
+              Contatti
+            </Link>
+          </li>
+        </ul>
+
+        {/* Hamburger Button */}
+        <button
+          className="md:hidden flex flex-col gap-1"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span className="w-6 h-0.5 bg-black"></span>
+          <span className="w-6 h-0.5 bg-black"></span>
+          <span className="w-6 h-0.5 bg-black"></span>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white px-6 pb-6">
+          <ul className="flex flex-col space-y-4">
+            <li>
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" onClick={() => setIsOpen(false)}>
+                Contatti
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 }

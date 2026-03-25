@@ -5,13 +5,15 @@ import Footer from "../Components/Footer";
 export default function Layout() {
   return (
     <>
-      <Navbar />
-      
-      <main>
-        <Outlet />
-      </main>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
 
-      <Footer />
+        <main>
+          <Outlet />
+        </main>
+
+        <Footer />
+      </div>
     </>
   );
 }

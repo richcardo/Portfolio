@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav className="w-full bg-white shadow-md z-50">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="w-full px-3 py-4 flex justify-between items-center">
         {/* Logo */}
         <h1 className="text-xl font-bold">Riccardo Dev</h1>
 
@@ -20,6 +20,11 @@ function Navbar() {
           <li>
             <Link to="/contact" className="hover:text-blue-500">
               Contatti
+            </Link>
+          </li>
+           <li>
+            <Link to="/projects" className="hover:text-blue-500">
+              Progetti
             </Link>
           </li>
         </ul>
@@ -49,6 +54,11 @@ function Navbar() {
                 Contatti
               </Link>
             </li>
+             <li>
+            <Link to="/projects" onClick={() => setIsOpen(false)}>
+              Progetti
+            </Link>
+          </li>
           </ul>
         </div>
       )}

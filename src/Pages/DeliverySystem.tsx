@@ -9,6 +9,8 @@ import {
   Clock,
 } from "lucide-react";
 
+import logo from "../../public/WhatsApp Image 2026-04-07 at 8.56.52 AM.jpeg";
+
 export default function DeliverySystem() {
   const container = {
     hidden: {},
@@ -42,8 +44,8 @@ export default function DeliverySystem() {
           </motion.h1>
           <img
             className="w-[100px] rounded-3xl"
-            src="../../public/WhatsApp Image 2026-04-07 at 8.56.52 AM.jpeg"
-            alt=""
+            src={logo}
+            alt="logo pizzatrack"
           />
         </div>
 

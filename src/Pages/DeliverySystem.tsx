@@ -7,6 +7,8 @@ import {
   BarChart3,
   MapPin,
   Clock,
+  Pizza,
+  Scooter,
 } from "lucide-react";
 
 export default function DeliverySystem() {
@@ -31,14 +33,19 @@ export default function DeliverySystem() {
         transition={{ duration: 0.8 }}
         className="bg-sky-500 text-white py-20 text-center"
       >
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-4xl md:text-6xl font-bold mb-4"
-        >
-          PizzaTrack 🍕🛵
-        </motion.h1>
+        <div className="flex justify-center items-center gap-4">
+          <Pizza className="text-yellow-500" size={90} />
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          >
+            PizzaTrack
+          </motion.h1>
+          <Scooter className="text-red-500" size={90} />
+        </div>
+
         <p className="text-xl md:text-2xl mb-6">
           Il gestionale per pizzerie che traccia le consegne, calcola i ricavi
           dei rider e ti fa risparmiare tempo!

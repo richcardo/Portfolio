@@ -1,4 +1,14 @@
 import { motion } from "framer-motion";
+import {
+  Package,
+  Euro,
+  CreditCard,
+  Map,
+  BarChart3,
+  MapPin,
+  Clock,
+} from "lucide-react";
+
 export default function DeliverySystem() {
   const container = {
     hidden: {},
@@ -133,14 +143,41 @@ export default function DeliverySystem() {
             <h3 className="text-xl font-semibold mb-4">Starter</h3>
             <p className="mb-4">Tutte le funzioni base per pizzerie piccole</p>
             <p className="text-2xl font-bold mb-6">79€/mese</p>
-            <ul className="mb-6 text-left">
-              <li>✅ Tracciamento consegne</li>
-              <li>✅ Totale incassi per Rider</li>
-              <li>✅ Opzione Pagamenti col pos</li>
-              <li>✅ Visualizzazione mappa</li>
-              <li>✅ Statistiche giornaliere</li>
-              <li>✅ Distanza percorsa</li>
-              <li>✅ Stato pagamento in tempo reale</li>
+            <ul className="mb-10 text-left space-y-4">
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <Package className="text-sky-500" size={20} />
+                <span>Tracciamento consegne</span>
+              </li>
+
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <Euro className="text-sky-500" size={20} />
+                <span>Totale incassi per Rider</span>
+              </li>
+
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <CreditCard className="text-sky-500" size={20} />
+                <span>Pagamenti POS</span>
+              </li>
+
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <Map className="text-sky-500" size={20} />
+                <span>Visualizzazione mappa</span>
+              </li>
+
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <BarChart3 className="text-sky-500" size={20} />
+                <span>Statistiche giornaliere</span>
+              </li>
+
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <MapPin className="text-sky-500" size={20} />
+                <span>Distanza percorsa</span>
+              </li>
+
+              <li className="flex items-center gap-3 transition duration-200 hover:translate-x-1">
+                <Clock className="text-sky-500" size={20} />
+                <span>Stato pagamento in tempo reale</span>
+              </li>
             </ul>
             <a
               href="https://wa.me/393516679592?text=Salve%20sono%20interessato%20al%20piano%20Starter%20di%20PizzaTrack"

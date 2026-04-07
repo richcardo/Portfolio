@@ -27,7 +27,7 @@ function Navbar() {
               Progetti
             </Link>
           </li>
-          <li className="bg-yellow-500 px-2 py-2 rounded-lg text-xl font-bold hover:text-white hover:bg-yellow-600 transition">
+          <li className="bg-sky-500 px-2 py-2 rounded-lg text-xl font-bold hover:text-white hover:bg-sky-600 transition">
             <Link to="/delivery-system">PizzaTrack 🍕🛵</Link>
           </li>
         </ul>
@@ -62,7 +62,7 @@ function Navbar() {
                 Progetti
               </Link>
             </li>
-            <li className="bg-yellow-500 px-2 py-2 rounded-lg text-xl font-bold hover:text-white hover:bg-yellow-400 transition">
+            <li className="bg-sky-500 px-2 py-2 rounded-lg text-xl font-bold hover:text-white hover:bg-sky-600 transition">
               <Link to="/delivery-system">PizzaTrack 🍕🛵</Link>
             </li>
           </ul>

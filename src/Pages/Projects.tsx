@@ -12,9 +12,10 @@ export default function Projects() {
           src="https://todo-list-five-plum-14.vercel.app/"
           photo={photo}
           title="TodoList"
+          caption="Un'App toDoList che ti permette di aggiungere task e contrassegnarle come già svolte, possibilità di eliminare i task completati e di filtrare i task per tutti, Completati, In Corso."
         />
         <Link to="/delivery-system">
-          <ProjectCard photo={Delivery} title="PizzaTrack" framework="LARAVEL" css="BOOTSTRAP"/>
+          <ProjectCard photo={Delivery} title="PizzaTrack" framework="LARAVEL" css="BOOTSTRAP" caption="Il gestionale per pizzerie che traccia le consegne, calcola i ricavi dei rider e ti fa risparmiare tempo!"/>
         </Link>
       </div>
     </div>

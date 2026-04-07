@@ -1,7 +1,7 @@
 export default function DeliverySystem() {
   return (
     <div className="bg-gray-50 font-sans">
-      <section className="bg-yellow-500 text-white py-20 text-center">
+      <section className="bg-sky-500 text-white py-20 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">PizzaTrack 🍕🛵</h1>
         <p className="text-xl md:text-2xl mb-6">
           Il gestionale per pizzerie che traccia le consegne, calcola i ricavi
@@ -9,7 +9,7 @@ export default function DeliverySystem() {
         </p>
         <a
           href="#pricing"
-          className="bg-white text-yellow-500 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+          className="bg-white text-sky-500 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
         >
           Scopri i piani
         </a>
@@ -79,7 +79,7 @@ export default function DeliverySystem() {
       >
         <h2 className="text-3xl font-bold mb-12">Piani e Prezzi</h2>
         <div className="flex justify-center gap-12">
-          <div className="bg-white border border-amber-300 p-6 rounded-xl shadow hover:shadow-lg transition">
+          <div className="bg-white border border-sky-300 p-6 rounded-xl shadow hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-4">Starter</h3>
             <p className="mb-4">Tutte le funzioni base per pizzerie piccole</p>
             <p className="text-2xl font-bold mb-6">79€/mese</p>
@@ -96,7 +96,7 @@ export default function DeliverySystem() {
               href="https://wa.me/393516679592?text=Salve%20sono%20interessato%20al%20piano%20Starter%20di%20PizzaTrack"
               target="_blank"
               rel="noreferrer"
-              className="bg-yellow-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-yellow-600 transition"
+              className="bg-sky-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-sky-600 transition"
             >
               Acquista
             </a>
@@ -104,7 +104,7 @@ export default function DeliverySystem() {
         </div>
       </section>
 
-      <section className="py-20 bg-yellow-500 text-white text-center">
+      <section className="py-20 bg-sky-500 text-white text-center">
         <h2 className="text-3xl font-bold mb-6">
           Inizia subito a risparmiare tempo e soldi!
         </h2>
@@ -115,7 +115,7 @@ export default function DeliverySystem() {
           href="https://wa.me/393516679592?text=Salve%20sono%20interessato%20a%20PizzaTrack%20e%20vorrei%20richiedere%20maggiori%20informazioni"
           target="_blank"
           rel="noreferrer"
-          className="bg-white text-yellow-500 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition"
+          className="bg-white text-sky-500 font-bold px-8 py-4 rounded-lg hover:bg-gray-100 transition"
         >
           Richiedi Info
         </a>

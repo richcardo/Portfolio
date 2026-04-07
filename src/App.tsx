@@ -4,6 +4,7 @@ import Layout from "./Layout/Layout";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import Projects from "./Pages/Projects";
+import DeliverySystem from "./Pages/DeliverySystem";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="projects" element={<Projects />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="delivery-system" element={<DeliverySystem />} />
           </Route>
         </Routes>
       </BrowserRouter>

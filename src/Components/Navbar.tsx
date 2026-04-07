@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Laptop } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="w-full bg-white shadow-md z-50">
-      <div className="w-full px-3 py-4 flex justify-between items-center">
+      <div className="w-full px-3 py-4 flex justify-center gap-5 items-center">
         {/* Logo */}
-        <h1 className="text-xl font-bold">Riccardo Dev</h1>
+        <div className="flex">
+          <Laptop />
+          <h1 className="text-xl font-bold">Riccardo Dev</h1>
+        </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 items-center">
+        <ul className="hidden md:flex space-x-8 items-center text-mauve-700">
           <li>
             <Link to="/" className="hover:text-blue-500">
               Home
@@ -27,8 +31,8 @@ function Navbar() {
               Progetti
             </Link>
           </li>
-          <li className="bg-sky-500 px-2 py-2 rounded-lg text-xl font-bold hover:text-white hover:bg-sky-600 transition">
-            <Link to="/delivery-system">PizzaTrack 🍕🛵</Link>
+          <li className="hover:text-blue-500">
+            <Link to="/delivery-system">PizzaTrack</Link>
           </li>
         </ul>
 
@@ -62,8 +66,8 @@ function Navbar() {
                 Progetti
               </Link>
             </li>
-            <li className="bg-sky-500 px-2 py-2 rounded-lg text-xl font-bold hover:text-white hover:bg-sky-600 transition">
-              <Link to="/delivery-system">PizzaTrack 🍕🛵</Link>
+            <li onClick={() => setIsOpen(false)}>
+              <Link to="/delivery-system">PizzaTrack</Link>
             </li>
           </ul>
         </div>

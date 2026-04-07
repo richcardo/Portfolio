@@ -34,7 +34,6 @@ export default function DeliverySystem() {
         className="bg-sky-500 text-white py-20 text-center"
       >
         <div className="flex justify-center items-center gap-4">
-          <Pizza className="text-yellow-500" size={90} />
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +42,8 @@ export default function DeliverySystem() {
           >
             PizzaTrack
           </motion.h1>
-          <Scooter className="text-red-500" size={90} />
+          <img className="w-[100px] rounded-3xl" src="../../public/WhatsApp Image 2026-04-07 at 8.56.52 AM.jpeg" alt="" />
+          
         </div>
 
         <p className="text-xl md:text-2xl mb-6">

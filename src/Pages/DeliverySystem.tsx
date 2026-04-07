@@ -1,26 +1,59 @@
+import { motion } from "framer-motion";
 export default function DeliverySystem() {
+  const container = {
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 3,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 70 },
+    show: { opacity: 1, y: 0 },
+  };
   return (
     <div className="bg-gray-50 font-sans">
-      <section className="bg-sky-500 text-white py-20 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">PizzaTrack 🍕🛵</h1>
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="bg-sky-500 text-white py-20 text-center"
+      >
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-4xl md:text-6xl font-bold mb-4"
+        >
+          PizzaTrack 🍕🛵
+        </motion.h1>
         <p className="text-xl md:text-2xl mb-6">
           Il gestionale per pizzerie che traccia le consegne, calcola i ricavi
           dei rider e ti fa risparmiare tempo!
         </p>
-        <a
+        <motion.a
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+          className="bg-white text-sky-500 px-6 py-3 rounded-lg hover:bg-gray-100 transition"
           href="#pricing"
-          className="bg-white text-sky-500 font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition"
         >
           Scopri i piani
-        </a>
-      </section>
-
+        </motion.a>
+      </motion.section>
       <section className="py-20 max-w-6xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12">
           Perché scegliere PizzaTrack
         </h2>
         <div className="grid md:grid-cols-3 gap-12">
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-xl shadow transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
             <h3 className="text-xl font-semibold mb-2">
               Tracciamento consegne
             </h3>
@@ -28,35 +61,52 @@ export default function DeliverySystem() {
               Visualizza tutte le consegne dei tuoi rider in tempo reale e su
               una mappa intuitiva.
             </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-xl shadow transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
             <h3 className="text-xl font-semibold mb-2">Totale incassi e POS</h3>
             <p>
               Calcola automaticamente i ricavi dei rider e controlla quali
               consegne sono già pagate.
             </p>
-          </div>
-          <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-white p-6 rounded-xl shadow transition duration-300 hover:scale-105 hover:shadow-xl"
+          >
             <h3 className="text-xl font-semibold mb-2">Statistiche avanzate</h3>
             <p>
               Controlla la distanza percorsa dai rider, ottieni report chiari e
               immediati.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="bg-gray-100 py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-12">Come funziona</h2>
-          <div className="grid md:grid-cols-3 gap-12">
-            <div>
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            className="grid md:grid-cols-3 gap-12"
+          >
+            <motion.div variants={item} initial="hidden" whileInView="show">
               <h3 className="text-xl font-semibold mb-2">
                 1. Aggiungi i rider
               </h3>
               <p>Registra i tuoi rider e le loro consegne giornaliere.</p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={item} initial="hidden" whileInView="show">
               <h3 className="text-xl font-semibold mb-2">
                 2. Traccia le consegne
               </h3>
@@ -64,12 +114,12 @@ export default function DeliverySystem() {
                 Visualizza le consegne su mappa e monitora l’incasso in tempo
                 reale.
               </p>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div variants={item} initial="hidden" whileInView="show">
               <h3 className="text-xl font-semibold mb-2">3. Ottieni report</h3>
               <p>Genera statistiche e totale incassi per ciascun rider.</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 

@@ -7,8 +7,6 @@ import {
   BarChart3,
   MapPin,
   Clock,
-  Pizza,
-  Scooter,
 } from "lucide-react";
 
 export default function DeliverySystem() {
@@ -42,8 +40,11 @@ export default function DeliverySystem() {
           >
             PizzaTrack
           </motion.h1>
-          <img className="w-[100px] rounded-3xl" src="../../public/WhatsApp Image 2026-04-07 at 8.56.52 AM.jpeg" alt="" />
-          
+          <img
+            className="w-[100px] rounded-3xl"
+            src="../../public/WhatsApp Image 2026-04-07 at 8.56.52 AM.jpeg"
+            alt=""
+          />
         </div>
 
         <p className="text-xl md:text-2xl mb-6">
